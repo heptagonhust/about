@@ -26,7 +26,7 @@
 #### 代码：
 
     深入理解 linux 内核 （RGY：对超算应用或许不是很重要？）
-    现代操作系统（基础知识，选一些章节看就好了，）（RGY：同上）
+    现代操作系统（基础知识，选一些章节看就好了）（RGY：同上）
 
     多核应用编程实战（入门）
     计算机科学丛书：高性能科学与工程计算（入门）
@@ -82,7 +82,7 @@
     mpi
     有 openmpi intel-mpi mpich2 platform-mpi
     一般 CUDA 程序常用 openmpi
-    一般 intel-mpi 性能更好（这个还是一个个都测试一遍吧）
+    一般 intel-mpi 性能更好（还是一个个都测试一遍吧）
     注意 numa 双路 cpu 对内存访问不对称, 及核绑定避免线程切换
 
     intel parallel studio
@@ -96,7 +96,7 @@
     openacc OpenCL
     通用多平台编程, 用的很少，有很多坑（但是并不推荐新人在知道题目之前，就学这个）
 
-    Doxygen
+    Doxygen（使用doxywizard，勾选上 Expert/Dot 里的各种*_GRAPH）
 
     链接库
     **换库** , 数学计算有 BLAS 等数学库,需要对比不同库的速度。
