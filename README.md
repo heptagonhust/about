@@ -1,4 +1,28 @@
-之前比赛的[文档积累](https://gitlab.com/heptagonhust/),telegram群，请联系 [Y00](https://t.me/anon_yoo) 进入
+# 关于
+这个repo为华科七边形于2019年整理，欢迎各位朋友的指教
+
+部分内容如有侵权，请联系 Rao, Geng Yu <zouyoo@outlook.com>,我们会尽快移除
+
+# 加入我们
+   请联系每年负责的同学，请安排好个人的时间（ 时间安排可以参考下面的比赛列表 ），避免产生不必要的咕咕咕行为
+   
+   近年，华科一般团队组成为：一名运维（或许队长也要兼任部分运维职务，一个人可能不够），其他人分成组，负责写各个题目的代码。
+   
+   AI题太多变了，一般出题之后找专门有研究的人来做，需要几个人跟着帮忙。
+   
+   我们希望从每年9月份的新大二中招人，具体的情况请联系当年的队长。
+   
+   不同学校队伍之间的比较：
+  * 有的学校没有专门的运维，每个人都有运维的能力。
+  * 有的学校有很多队员是在做科学计算的 CS/非CS 学生，清北的朋友一般能找到很多这方面的资源，他们学校也有很多做相关科学研究的教师，近年华科主要还是纯粹CS的，没有专门做科学计算的其他系的学生
+
+# 如何预防鸽子? 
+一旦遇到了鸽子，对整个团队的规划会产生非常大的影响，如果有人要中途退出，一定尽快说明，并重新分配任务。
+一般造成鸽子的原因：
+
+    *寒假一直在写课设
+    *准备找工作
+    *远程参与
 
 # 比赛列表和一般推荐时间表
 
@@ -10,16 +34,6 @@
 [ASC](https://www.asc-events.org/ASC19/)</br>
 [ISC](https://www.isc-hpc.com/student-cluster-competition-2019.html)</br>
 [SC](http://www.studentclustercompetition.us/)</br>
-
-# 教程和经验积累
-
-# 如何预防鸽子? 
-一旦遇到了鸽子，对整个团队的规划会产生非常大的影响，如果有人要中途退出，一定尽快说明，并重新分配任务。
-一般造成鸽子的原因：
-
-    *寒假一直在写课设
-    *准备找工作
-    *远程参与
 
 
 
@@ -42,7 +56,7 @@
 [here](https://github.com/heptagonhust/about/blob/master/MPI&openMP/README.md)
 
 #### GPGPU
-在这个repo有单独的文件夹
+[here](https://github.com/heptagonhust/about/blob/master/GPGPU&MIC/readme.md)
 #### 运维
 [here](https://github.com/heptagonhust/about/blob/master/运维.md)
 #### HPC 从什么都不会到入门（2016年的整理？）
@@ -107,3 +121,6 @@
 
 做超算算很多事情很杂, 很多优化可能相当繁琐, 也有很多参数和库可以调, 代码 debug 起来也很困难, 环境还有巨多坑,
 做起题目来不要乱, 从顶至底一步一步来, 少做 dirty 的事情, 保持任务分工明确, 然后把所有优化的点都重视起来, 多交流
+
+
+之前比赛的[文档积累](https://gitlab.com/heptagonhust/),telegram群，请联系 [Y00](https://t.me/anon_yoo) 进入
