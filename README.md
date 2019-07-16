@@ -103,6 +103,8 @@
     advisor inspector vtune 性能分析工具
     优化文档也是必读, 重点掌握
 
+    pgi编译器 全家桶
+    
     cuda
     NVIDIA套装
 
