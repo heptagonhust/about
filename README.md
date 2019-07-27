@@ -123,7 +123,7 @@
     fftw的性能有不少窍门：plan，关于是在当前的内存空间做fft还是输入输出在不同的array，这些对性能有不少影响
     
     IDA PRO
-    对于做体系结构优化的时候，Intel advisor/vtune可能不够用，需要读汇编代码来判断
+    对于做体系结构优化的时候，Intel advisor/vtune可能不够用，需要读汇编代码来判断(举例来说，一些 math函数/简单的函数 如果内联，可能会更好, 原因是这种jump,有一定可能性造成 instruction cache miss (指当调用的函数很多，并且 instruction cache 会被装满的情况))
 
     普通的tmux等工具就不多说了
 另外
