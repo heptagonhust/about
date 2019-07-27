@@ -123,4 +123,4 @@
 做起题目来不要乱, 从顶至底一步一步来, 少做 dirty 的事情, 保持任务分工明确, 然后把所有优化的点都重视起来, 多交流
 
 
-之前比赛的[文档积累](https://gitlab.com/heptagonhust/),telegram群，请联系 [Y00](https://t.me/anon_yoo) 进入
+之前比赛的[文档积累](https://gitlab.com/heptagonhust/asc)(已经决定改用QQ群文件保存,请联系每年的队长要),telegram群，请联系 [Y00](https://t.me/anon_yoo) 进入
