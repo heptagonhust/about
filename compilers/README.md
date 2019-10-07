@@ -1,6 +1,6 @@
 # 用于收集编译器相关的经验
 这个文件夹下的其他pdf包含了精度控制（可以通过降精度来加速，但是可能造成收敛速度变慢，反而减速），向量化（一般都是读输出的信息，对没有充分向量化的地方进行分析和修改，浙大的前辈 ASC16 手写过orz），
-
+# intel
 ![example](./example.png) 一个典型的样例(CESM)
 
 
@@ -41,6 +41,8 @@ Profile-Guided Optimization (PGO)
 .. Re-build the program with the profiling data using flag -prof-use or /Qprof-use
 https://software.intel.com/en-us/code-samples/intel-compiler/intel-compiler-features/ProfileGuidedOptimization
 ```
+# gcc
+-march=native
 
 张立琛blog上的一些参数
 
