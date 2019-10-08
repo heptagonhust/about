@@ -44,6 +44,45 @@ https://software.intel.com/en-us/code-samples/intel-compiler/intel-compiler-feat
 # gcc
 -march=native
 
+编译abi的问题，可以选择最新的，然后把abi降下来
+```
+https://askubuntu.com/questions/770358/how-should-i-handle-abi-incompatability-between-gcc-4-9-and-gcc-5/1179417#1179417
+-fabi-version=n
+           Use version n of the C++ ABI.  The default is version 0.
+
+           Version 0 refers to the version conforming most closely to the C++ ABI specification.  Therefore, the ABI obtained using version 0 will change in different versions of G++ as ABI bugs are
+           fixed.
+
+           Version 1 is the version of the C++ ABI that first appeared in G++ 3.2.
+
+           Version 2 is the version of the C++ ABI that first appeared in G++ 3.4, and was the default through G++ 4.9.
+
+           Version 3 corrects an error in mangling a constant address as a template argument.
+
+           Version 4, which first appeared in G++ 4.5, implements a standard mangling for vector types.
+
+           Version 5, which first appeared in G++ 4.6, corrects the mangling of attribute const/volatile on function pointer types, decltype of a plain decl, and use of a function parameter in the
+           declaration of another parameter.
+
+           Version 6, which first appeared in G++ 4.7, corrects the promotion behavior of C++11 scoped enums and the mangling of template argument packs, const/static_cast, prefix ++ and --, and a class
+           scope function used as a template argument.
+
+           Version 7, which first appeared in G++ 4.8, that treats nullptr_t as a builtin type and corrects the mangling of lambdas in default argument scope.
+
+           Version 8, which first appeared in G++ 4.9, corrects the substitution behavior of function types with function-cv-qualifiers.
+
+           Version 9, which first appeared in G++ 5.2, corrects the alignment of "nullptr_t".
+
+           See also -Wabi.
+
+       -fabi-compat-version=n
+           On targets that support strong aliases, G++ works around mangling changes by creating an alias with the correct mangled name when defining a symbol with an incorrect mangled name.  This switch
+           specifies which ABI version to use for the alias.
+
+           With -fabi-version=0 (the default), this defaults to 2.  If another ABI version is explicitly selected, this defaults to 0.
+
+           The compatibility version is also set by -Wabi=n.
+```
 张立琛blog上的一些参数
 
 http://blog.qzwlecr.com/2018/01/30/ICC%E4%BC%98%E5%8C%96%E5%8F%82%E6%95%B0%E7%AC%94%E8%AE%B0/#more
