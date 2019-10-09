@@ -4,6 +4,8 @@
     **指令集**，学校的向量化指令集非常低，比赛集群大概比学校向量化长度高4倍，所以对热点会有不少的影响
     **核数** ，学校集群核数少，所以MPI通信时间和计算时间的比值会不一样
     什么样的应用更加适合开 **超线程** ？ 如果访存非常好，但是CPU后端使用率非常低（通过vtune可以看到），可以实验一下超线程。
+ 快速profile tlb miss
+ https://unix.stackexchange.com/questions/29853/command-to-measure-tlb-misses-on-linux
 
 # 一般原则
 
