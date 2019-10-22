@@ -8,7 +8,9 @@ http://www.nsccwx.cn/process.php?word=process&i=54
 ## CPC2019体验
 
 我们看 bbs上的课件入门
+
 http://bbs.nsccwx.cn/assets/uploads/files/1528120200586-cpc%E5%9F%B9%E8%AE%AD_%E7%A5%9E%E5%A8%81%E5%A4%AA%E6%B9%96%E4%B9%8B%E5%85%89%E5%B9%B6%E8%A1%8C%E7%BC%96%E7%A8%8B%E4%B8%8E%E4%B8%8A%E6%9C%BA%E5%AE%9E%E8%B7%B5.pdf
+
 http://bbs.nsccwx.cn/assets/uploads/files/1529047771770-%E7%A5%9E%E5%A8%81%E5%A4%AA%E6%B9%96%E4%B9%8B%E5%85%89%E9%AB%98%E7%BA%A7%E8%BF%9B%E9%98%B6.pdf
 
 然后 去阅读官网的用户手册， 里面有的命令是错的，出错可以去bbs逛逛
