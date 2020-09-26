@@ -15,7 +15,8 @@ fork/join
 
 实现为标准的库函数，包含一套编译器伪指令，运行时的库函数，环境变量
 
-OPENMP 用于解决串行分解 和 负载不均 问题
+# OPENMP 
+用于解决串行分解 和 负载不均 问题
 
 注意:
 
@@ -73,7 +74,7 @@ omp_set_lock，锁
 omp_unset_lock， 
 omp_destroy_lock， 对应omp_init_lock，销毁锁
 ```
-##### MPI 标准信息传递界面
+# MPI 标准信息传递界面
 
 分布式存储器并行 
 进程(MPI rank)间通讯方式
@@ -177,7 +178,7 @@ MPI_Test(MPI_Resquest &req, int* flag, MPI_Status &status);
     并行io/ 多个进程访问一个文件
     单边/远程存储访问
 
-##### 混合编程
+# 混合编程
 
     在MPI中，每个节点上的MPI rank的数量持续增加，所有MPI ranks的消耗内存数量将最终超过节点上可提供的内存，或使网络带宽收到限制，并行度受限
     注意MPI在细颗粒度的不足，减少opnmp在线程中的通讯
