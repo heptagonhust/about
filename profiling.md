@@ -24,8 +24,10 @@ Liang Shi 写于 2015 <liangshi@hustunique.com>
 
 ##### Intel VTune 
 适用于MPI应用，如果是想做体系结构的优化的话可以考虑用一下 Intel Advixe
-两个是不同的工具， vtune（新版本） 的使用命令示范见 NASA 文档 :
+两个是不同的工具， vtune（旧版本） 的使用命令示范见 NASA 文档 :
 ```
+The command line 'amplxe-cl' is deprecated. Use 'vtune' instead.
+
 https://www.nas.nasa.gov/hecc/support/kb/finding-hotspots-in-your-code-with-the-intel-vtune-command-line-interface_506.html
 ```
 (可以注册下载学生免费版)
