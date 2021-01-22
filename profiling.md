@@ -30,4 +30,5 @@ The command line 'amplxe-cl' is deprecated. Use 'vtune' instead.
 
 https://www.nas.nasa.gov/hecc/support/kb/finding-hotspots-in-your-code-with-the-intel-vtune-command-line-interface_506.html
 ```
+新版本举例 https://software.intel.com/content/www/us/en/develop/documentation/vtune-help/top/command-line-interface/command-line-usage-scenarios/openmp-analysis-from-the-command-line.html
 (可以注册下载学生免费版)
