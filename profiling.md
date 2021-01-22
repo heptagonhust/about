@@ -22,6 +22,10 @@ Liang Shi 写于 2015 <liangshi@hustunique.com>
 - VampirTrace is an open source library that allows detailed logging of program execution for parallel applications using message passing (MPI) and threads (OpenMP), Pthreads). Besides these typical parallelization paradigms, VampirTrace is capable of tracing GPU accelerated applications and generates exact time stamps for all GPU related events.
 
 
-##### IntelVTune 
+##### Intel VTune 
 适用于MPI应用，如果是想做体系结构的优化的话可以考虑用一下 Intel Advixe
+两个是不同的工具， vtune（新版本） 的使用命令示范见 NASA 文档 :
+```
+https://www.nas.nasa.gov/hecc/support/kb/finding-hotspots-in-your-code-with-the-intel-vtune-command-line-interface_506.html
+```
 (可以注册下载学生免费版)
