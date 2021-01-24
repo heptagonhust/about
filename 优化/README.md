@@ -19,3 +19,14 @@
     如果优化只是针对特殊样例的，应该用宏控制，如果现场发现对与实际样例负优化了，就改宏重新编译
     不要改坏应用原有的功能
     不要再引入glog这种东西来做logging，请使用 header only 的库，添加源文件进去就好，可以考虑我fork在这个组织的几个库
+
+# 换库
+## Python 
+使用Intel numpy scipy https://software.intel.com/content/www/us/en/develop/articles/installing-the-intel-distribution-for-python-and-intel-performance-libraries-with-pip-and.html
+```
+numpy 	pip install intel-numpy 	Linux, Win, macOS(10.12)
+scipy 	pip install intel-scipy
+scikit-learn 	pip install intel-scikit-learn
+daal4y 	pip install daal4py
+tbb4py 	pip install tbb4py
+```
