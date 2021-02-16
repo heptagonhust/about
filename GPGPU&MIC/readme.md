@@ -9,6 +9,7 @@ cuda编程的东西很多，出的题目涉及的都不难，可以现学的。
 
 可以调节的参数(以后的同学逐渐完善)
 ```
+关于 thread 数量，需要注意 thread 过多，对 cache & register 的影响，一般都需要让 register够用，不要 split
 configurable bank size, which can be set using cudaDeviceSetSharedMemConfig() to either four bytes (cudaSharedMemBankSizeFourByte, the default) or eight bytes (cudaSharedMemBankSizeEightByte). Setting the bank size to eight bytes can help avoid shared memory bank conflicts when accessing double precision data.
 ```
 ```
