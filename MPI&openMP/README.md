@@ -6,6 +6,10 @@ http://pages.tacc.utexas.edu/~eijkhout/istc/istc.html</br>
 https://bitbucket.org/VictorEijkhout/hpc-book-and-course</br>
 https://bitbucket.org/VictorEijkhout/parallel-computing-book/src</br>
 
+TIPS:
+
+极少需要用 mpi barrier，一般用通信函数来自动做同步就好了。
+MPI_SSEND / RSEND, 绝对不要轻易用
 #### 更加古老的整理
 #####  OPENMP OPEN MT-PROCESSING
 
