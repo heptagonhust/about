@@ -9,7 +9,7 @@
   
  什么样的应用更加适合开 **超线程** ？ 如果访存非常好，但是CPU后端 backend 使用率非常低（通过vtune可以看到），可以实验一下超线程。
  
- **SIMD** , 可能向量化之后, 因为过热, 频率会下降, 注意这点.
+ **SIMD** , 使用 SIMD 功能后， CPU频率可能会下降, 注意这点. 取决于具体硬件
  
  快速profile tlb miss
  https://unix.stackexchange.com/questions/29853/command-to-measure-tlb-misses-on-linux
