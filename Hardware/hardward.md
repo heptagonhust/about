@@ -1,6 +1,6 @@
 # HPC硬件入门
 
-以下是一些基础知识，不定期更新
+以下是一些基础知识，不定期更新(last update 2024.11.9)
 
 ------
 
@@ -85,6 +85,16 @@ AND，处理器一样有Bug：
 
 一般8GPU/10GPU的服务器没有那么多PCIe通道，因此出现了PLX芯片，也就是PCIe Switch，例如可以1个PCIe x16扩展4个PCIe x16 GPU。这样，双路CPU就可以上8GPU。同样，也有独立的PCIe Switch，即GPU Box(典型型号例如浪潮BX512-IP，这是腾讯定制的4GPU扩展柜)。
 
+安装SXM GPU比较复杂，具体见：
+
+[SXM5 PCIe 开关板电缆布线 |ThinkSystem SR675 V3 |联想文档 (lenovo.com)](https://pubs.lenovo.com/sr675-v3/cable_routing_for_pcie_switch_board)
+
+这是一个系列文档并且有视频，目前只有联想有这么详细的doc。
+
+垃圾佬必然要玩过x99，毛子的网站有一定的参考价值：
+
+[Veineda x99 v367: характеристики, обзор возможностей, bios и прошивка, совместимость, покупка и цены (xeon-e5450.ru)](https://xeon-e5450.ru/socket-2011-3/veineda-x99-v367/)
+
 ------
 
 ### 内存(RAM)
@@ -152,4 +162,49 @@ SLC和MLC目前基本都只有2手，全新的最好的就是TLC了，但是TLC�
 
 ### GPU/各类加速卡、计算卡
 
-to be continued.
+最主流的毫无疑问是NVIDIA的GPU，尤其是Tesla系列数据中心计算卡。目前国内大量存世的有FP64的计算卡是A100，其实A800也有，但是砍了带宽。A100/A800有40G和80G两种版本，80GB的显存是HBM2e，对HPL提升显著，HPCG提升很少。H100是最后一代短暂在国内上市的旗舰规格GPU，但是主要是SXM的，PCIe版本很少。H800阉割了FP64算力和带宽，别的规格和H100一致，同样主要是SXM版本。B100/B200系列的旗舰就和我们没什么关系了(禁售)。
+
+非NV计算卡有以下几种：
+
+- AMD GPU，Rocm软件栈，全套的解决方案，主打一个力大砖飞：生态肯定是不如NV的，但是同代产品的绝对数值基本上更强。
+- Imagine的IP核，比如目前(2024.11的摩尔线程，之前就是买了Imagine的IP核，但是驱动更新的勤快，好评)。国内还有很多家的GPU都是一个来源。
+- 昇腾系，华为的GPU，性能不错，兼容性由于国产化用昇腾很多，做产品其实问题不大，但是做HPC的优化由于文档和其他的兼容性问题，会更不方便一些。
+- 海光DCU等等GPU，早年AMD落魄的时候买下来Zen1和GPU的源码，因此海光是有CPU和GPU的，实际就是AMD初代产品换皮。类似的还有澜起，其实就是Intel CPU换皮，不过海光真有源码，但是澜起没有。
+- Apple，封闭的GPU/NPU和软件栈，而且也没有服务器，一般没什么人在这上面搞HPC。
+- Intel，Xe GPU，就是核显那一套爆改，最近出了个Xeon Max CPU，在CPU里添加了AMX指令集，同时添加了HBM内存。详细见：[Intel® Xeon® 可扩展处理器 Max 系列](https://www.intel.com/content/www/us/en/developer/articles/technical/xeon-scalable-processor-max-series.html)
+
+GPU的主要参数主要是显存位宽/实际的带宽、显存容量、显存的类型、CU/SM单元数量、Tensor Core数量等等；一般来说datasheet会给出典型的算力，比如fp32单精度10Tflops，半精度fp1620Tflops等等。带宽越大越好，比如512bit就是128bit的4倍；显存容量越大，能跑的模型就越大，同时刀法精湛的皮衣黄买的价格可就不止翻倍了；显存一般来说HBM3>HBM2e>HBM2>GDDR6>GDDR5，HBM基本上都大于GDDR，代数更高的大于代数更低的，体现上就是带宽更高、频率更高。
+
+显存的特点是超大带宽、超高延时；内存是低延时，低带宽(相对显存来说，其实带宽也不低了)。
+
+下面附上一张很全面的GPU性能速查表：
+
+[GPU 性能（数据表）快速参考 （2023） (arthurchiao.art)](https://arthurchiao.art/blog/gpu-data-sheets/)
+
+*To be  continued：CU、Tensor core*
+
+------
+
+### NIC
+
+[网卡 - 维基百科，自由的百科全书 (wikipedia.org)](https://zh.wikipedia.org/wiki/网卡)
+
+NIC即网卡，一般是连接以太网或者高性能网络的。HPC一般有2种网络：千兆/万兆用来和Internet通信，IB网卡/RoCE网卡用来NFS或者计算的通信。
+
+IB：[以太网卡、IB网卡的详细介绍以及区别分析_ib卡和网卡有什么区别-CSDN博客](https://blog.csdn.net/fiber_naddod/article/details/127575067)
+
+RoCE：[RoCE、IB和TCP等网络的基本知识及差异对比 - 华为 (huawei.com)](https://support.huawei.com/enterprise/zh/doc/EDOC1100203347)
+
+IB基本上被Mellonax(现在已经被NV收购)垄断，RoCE现在华为在主推。小型集群IB很好，但是多级网络的大型超算基本上都是RoCE。现在RoCE高端基本上是800G带宽。
+
+*to be continued：具体的原理和通信过程*
+
+------
+
+## 一些相关网站的链接
+
+- [about/Hardware/hardward.md at master · heptagonhust/about (github.com)](https://github.com/heptagonhust/about/blob/master/Hardware/hardward.md)
+- [首页 | HPC知识分享 (hpclib.com)](https://hpclib.com/)
+
+------
+
